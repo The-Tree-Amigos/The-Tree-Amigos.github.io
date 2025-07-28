@@ -16,19 +16,21 @@ function initNavigation() {
     // Mobile menu toggle
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            const isActive = navMenu.classList.toggle('active');
             
             // Animate hamburger menu
-            const hamburger = navToggle.querySelector('.hamburger');
-            hamburger.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            
+            // Update ARIA attributes for accessibility
+            navToggle.setAttribute('aria-expanded', isActive);
         });
 
         // Close mobile menu when clicking nav links
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
-                const hamburger = navToggle.querySelector('.hamburger');
-                hamburger.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -36,8 +38,18 @@ function initNavigation() {
         document.addEventListener('click', function(e) {
             if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
-                const hamburger = navToggle.querySelector('.hamburger');
-                hamburger.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close mobile menu with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.focus(); // Return focus to toggle button
             }
         });
     }
