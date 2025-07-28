@@ -3,11 +3,11 @@ const siteConfig = {
     name: "The Tree Amigos",
     tagline: "We'll cut you... any tree!",
     email: "info@thetreeamigos.com",
-    phone: "(801) 555-TREE",
+    phone: "(562) 472 - 6225",
     address: "Ogden, UT 84401"
   },
   serviceArea: "Ogden and Salt Lake City Area",
-  hours: "Monday - Saturday: 7:00 AM - 6:00 PM",
+  hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
   social: {
     facebook: "#",
     instagram: "#"
