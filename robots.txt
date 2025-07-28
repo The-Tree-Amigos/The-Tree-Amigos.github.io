@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/tree-amigos/sitemap.xml
+
+# Block crawling of form submission endpoints
+Disallow: /submit
+Disallow: /*formspree*

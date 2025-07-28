@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tree Amigos - Professional Tree Care in Ogden & Salt Lake City</title>
+    <meta name="description" content="Professional tree care services in Ogden and Salt Lake City. Certified arborists specializing in tree pruning, removal, health consultations, and plant healthcare programs.">
+    <meta name="keywords" content="tree care, arborist, tree removal, tree pruning, Ogden, Salt Lake City, tree health">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Tree Amigos - Professional Tree Care">
+    <meta property="og:description" content="We'll cut you... any tree! Professional tree care services in the Ogden/SLC area.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="siteConfig.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "The Tree Amigos",
+        "description": "Professional tree care services",
+        "telephone": "(801) 555-TREE",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ogden",
+            "addressRegion": "UT",
+            "postalCode": "84401"
+        },
+        "areaServed": ["Ogden", "Salt Lake City"],
+        "serviceType": "Tree Care Services"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="images/logo.png" alt="The Tree Amigos Logo" class="logo" loading="lazy">
+                    <span class="company-name">The Tree Amigos</span>
+                </div>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="tel:(801) 555-TREE" class="phone-btn" id="header-phone">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">(801) 555-TREE</span>
+                    </a>
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-tagline">We'll cut you... any tree!</span>
+                        <span class="hero-subtitle">Professional Tree Care That Preserves Your Investment</span>
+                    </h1>
+                    <p class="hero-description">
+                        Certified arborists serving high-end properties in the Ogden and Salt Lake City area. 
+                        We focus on tree health, longevity, and preserving the value of your landscape.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+                        <a href="tel:(801) 555-TREE" class="btn btn-secondary">
+                            <span class="phone-icon">📞</span>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-tree-care.jpg" alt="Professional tree care services" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">How We Care for Your Trees</h2>
+                <div class="services-grid">
+                    <div class="service-category">
+                        <h3 class="service-category-title">Production Tree Care</h3>
+                        <ul class="service-list" id="production-services">
+                            <!-- Populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="service-category">
+                        <h3 class="service-category-title">Specialty Services</h3>
+                        <ul class="service-list" id="specialty-services">
+                            <!-- Populated by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition Section -->
+        <section class="value-props" id="about">
+            <div class="container">
+                <h2 class="section-title">Why Choose The Tree Amigos</h2>
+                <div class="value-grid" id="value-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get Your Free Estimate</h2>
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <!-- Honeypot field for spam protection -->
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Property Address</label>
+                                <input type="text" id="address" name="address">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    <option value="consultation">Free Consultation</option>
+                                    <option value="pruning">Tree Pruning</option>
+                                    <option value="removal">Tree Removal</option>
+                                    <option value="health">Tree Health Assessment</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message/Description</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your tree care needs..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+                        </form>
+                        <div class="form-status" id="form-status"></div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Phone:</strong>
+                                <a href="tel:(801) 555-TREE" id="contact-phone">(801) 555-TREE</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email:</strong>
+                                <a href="mailto:info@thetreeamigos.com" id="contact-email">info@thetreeamigos.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Service Area:</strong>
+                                <span id="service-area">Ogden and Salt Lake City Area</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Hours:</strong>
+                                <span id="business-hours">Monday - Saturday: 7:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-cta">
+                            <p><strong>Ready to improve your trees?</strong></p>
+                            <p>Call us today for your free consultation and estimate!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="company-name" id="footer-company">The Tree Amigos</span>
+                    <span class="tagline" id="footer-tagline">We'll cut you... any tree!</span>
+                </div>
+                <div class="footer-contact">
+                    <span id="footer-phone">(801) 555-TREE</span>
+                    <span id="footer-email">info@thetreeamigos.com</span>
+                </div>
+                <div class="footer-area">
+                    <span id="footer-service-area">Serving Ogden and Salt Lake City Area</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Tree Amigos. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="siteConfig.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

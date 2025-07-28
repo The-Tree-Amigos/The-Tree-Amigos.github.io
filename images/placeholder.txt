@@ -1,0 +1,14 @@
+This directory contains images for the Tree Amigos website.
+
+Required images:
+- logo.png (40x40px) - Company logo
+- hero-tree-care.jpg - Professional tree care hero image
+- favicon.ico - Website favicon
+
+Note: These are placeholder references. Actual images should be:
+- Optimized for web (compressed)
+- Properly sized for their use cases
+- Include alt text in HTML for accessibility
+- Use WebP format when possible for better performance
+
+For GitHub Pages deployment, ensure all images are properly licensed and optimized.
