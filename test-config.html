@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ddd; }
+        .test-result { margin: 10px 0; padding: 10px; background: #f5f5f5; }
+        .pass { background: #d4edda; color: #155724; }
+        .fail { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Tree Amigos Configuration Test</h1>
+    
+    <div class="test-section">
+        <h2>Current Configuration</h2>
+        <div id="config-display"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Dynamic Content Tests</h2>
+        <div id="test-results"></div>
+    </div>
+
+    <script src="siteConfig.js"></script>
+    <script>
+        // Display current configuration
+        document.getElementById('config-display').innerHTML = `
+            <pre>${JSON.stringify(siteConfig, null, 2)}</pre>
+        `;
+
+        // Test dynamic content updates
+        function runTests() {
+            const tests = [
+                {
+                    name: 'Company Name',
+                    expected: siteConfig.company.name,
+                    actual: siteConfig.company.name
+                },
+                {
+                    name: 'Company Phone',
+                    expected: siteConfig.company.phone,
+                    actual: siteConfig.company.phone
+                },
+                {
+                    name: 'Company Email',
+                    expected: siteConfig.company.email,
+                    actual: siteConfig.company.email
+                },
+                {
+                    name: 'Company Tagline',
+                    expected: siteConfig.company.tagline,
+                    actual: siteConfig.company.tagline
+                },
+                {
+                    name: 'Service Area',
+                    expected: siteConfig.serviceArea,
+                    actual: siteConfig.serviceArea
+                },
+                {
+                    name: 'Business Hours',
+                    expected: siteConfig.hours,
+                    actual: siteConfig.hours
+                },
+                {
+                    name: 'Production Services Count',
+                    expected: siteConfig.services.production.length,
+                    actual: siteConfig.services.production.length
+                },
+                {
+                    name: 'Specialty Services Count',
+                    expected: siteConfig.services.specialty.length,
+                    actual: siteConfig.services.specialty.length
+                },
+                {
+                    name: 'Value Props Count',
+                    expected: siteConfig.valueProps.length,
+                    actual: siteConfig.valueProps.length
+                }
+            ];
+
+            const resultsContainer = document.getElementById('test-results');
+            let allPassed = true;
+
+            tests.forEach(test => {
+                const passed = test.expected === test.actual;
+                if (!passed) allPassed = false;
+
+                const resultDiv = document.createElement('div');
+                resultDiv.className = `test-result ${passed ? 'pass' : 'fail'}`;
+                resultDiv.innerHTML = `
+                    <strong>${test.name}:</strong> 
+                    Expected: "${test.expected}", 
+                    Actual: "${test.actual}" 
+                    ${passed ? '✅ PASS' : '❌ FAIL'}
+                `;
+                resultsContainer.appendChild(resultDiv);
+            });
+
+            // Overall result
+            const overallDiv = document.createElement('div');
+            overallDiv.className = `test-result ${allPassed ? 'pass' : 'fail'}`;
+            overallDiv.innerHTML = `<strong>Overall Result: ${allPassed ? '✅ ALL TESTS PASSED' : '❌ SOME TESTS FAILED'}</strong>`;
+            resultsContainer.appendChild(overallDiv);
+        }
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', runTests);
+    </script>
+</body>
+</html>

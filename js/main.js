@@ -67,6 +67,9 @@ function populateContent() {
         return;
     }
 
+    // Update elements with data-config attributes
+    updateDataConfigElements();
+
     // Update phone numbers
     const phoneElements = document.querySelectorAll('[id$="-phone"]');
     phoneElements.forEach(el => {
@@ -381,3 +384,84 @@ function initLazyLoading() {
 
 // Call lazy loading initialization
 document.addEventListener('DOMContentLoaded', initLazyLoading);
+
+// Update elements with data-config attributes
+function updateDataConfigElements() {
+    const configElements = document.querySelectorAll('[data-config]');
+    
+    configElements.forEach(el => {
+        const configPath = el.getAttribute('data-config');
+        const value = getConfigValue(configPath);
+        
+        if (value !== undefined) {
+            if (el.tagName === 'TITLE') {
+                // Update page title with company name
+                el.textContent = `${siteConfig.company.name} - Professional Tree Care in Ogden & Salt Lake City`;
+            } else if (el.tagName === 'META') {
+                // Update meta tag content
+                const property = el.getAttribute('property');
+                const name = el.getAttribute('name');
+                
+                if (property === 'og:title') {
+                    el.setAttribute('content', `${siteConfig.company.name} - Professional Tree Care`);
+                } else if (property === 'og:description') {
+                    el.setAttribute('content', `${siteConfig.company.tagline} Professional tree care services in the Ogden/SLC area.`);
+                }
+            } else if (configPath === 'company.name' && el.classList.contains('section-title')) {
+                // Special handling for "Why Choose [Company Name]" section
+                el.textContent = `Why Choose ${siteConfig.company.name}`;
+            } else if (configPath === 'currentYear') {
+                // Update copyright year
+                el.textContent = new Date().getFullYear();
+            } else {
+                // Regular text content update
+                el.textContent = value;
+            }
+        }
+    });
+
+    // Update img alt attributes with data-alt-config
+    const altConfigElements = document.querySelectorAll('[data-alt-config]');
+    altConfigElements.forEach(el => {
+        const configPath = el.getAttribute('data-alt-config');
+        const value = getConfigValue(configPath);
+        
+        if (value !== undefined && el.tagName === 'IMG') {
+            el.setAttribute('alt', `${value} Logo`);
+        }
+    });
+
+    // Update structured data
+    updateStructuredData();
+}
+
+// Helper function to get nested config values
+function getConfigValue(path) {
+    return path.split('.').reduce((obj, key) => obj && obj[key], siteConfig);
+}
+
+// Update structured data script
+function updateStructuredData() {
+    const structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+    if (structuredDataScript && siteConfig) {
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": siteConfig.company.name,
+            "description": "Professional tree care services",
+            "telephone": siteConfig.company.phone,
+            "email": siteConfig.company.email,
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ogden",
+                "addressRegion": "UT",
+                "postalCode": "84401"
+            },
+            "areaServed": siteConfig.serviceArea.split(" and "),
+            "serviceType": "Tree Care Services",
+            "openingHours": siteConfig.hours
+        };
+        
+        structuredDataScript.textContent = JSON.stringify(structuredData, null, 4);
+    }
+}

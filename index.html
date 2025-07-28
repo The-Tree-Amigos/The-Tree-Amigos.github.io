@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Tree Amigos - Professional Tree Care in Ogden & Salt Lake City</title>
+    <title data-config="company.name">The Tree Amigos - Professional Tree Care in Ogden & Salt Lake City</title>
     <meta name="description" content="Professional tree care services in Ogden and Salt Lake City. Certified arborists specializing in tree pruning, removal, health consultations, and plant healthcare programs.">
     <meta name="keywords" content="tree care, arborist, tree removal, tree pruning, Ogden, Salt Lake City, tree health">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="The Tree Amigos - Professional Tree Care">
-    <meta property="og:description" content="We'll cut you... any tree! Professional tree care services in the Ogden/SLC area.">
+    <meta property="og:title" content="The Tree Amigos - Professional Tree Care" data-config="company.name">
+    <meta property="og:description" content="We'll cut you... any tree! Professional tree care services in the Ogden/SLC area." data-config="company.tagline">
     <meta property="og:type" content="website">
     
     <!-- Favicon -->
@@ -47,8 +47,8 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <img src="images/logo.png" alt="The Tree Amigos Logo" class="logo" loading="lazy">
-                    <span class="company-name">The Tree Amigos</span>
+                    <img src="images/logo.png" alt="The Tree Amigos Logo" class="logo" loading="lazy" data-alt-config="company.name">
+                    <span class="company-name" data-config="company.name">The Tree Amigos</span>
                 </div>
                 
                 <div class="nav-menu" id="nav-menu">
@@ -84,7 +84,7 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        <span class="hero-tagline">We'll cut you... any tree!</span>
+                        <span class="hero-tagline" data-config="company.tagline">We'll cut you... any tree!</span>
                         <span class="hero-subtitle">Professional Tree Care That Preserves Your Investment</span>
                     </h1>
                     <p class="hero-description">
@@ -129,7 +129,7 @@
         <!-- Value Proposition Section -->
         <section class="value-props" id="about">
             <div class="container">
-                <h2 class="section-title">Why Choose The Tree Amigos</h2>
+                <h2 class="section-title" data-config="company.name">Why Choose The Tree Amigos</h2>
                 <div class="value-grid" id="value-grid">
                     <!-- Populated by JavaScript -->
                 </div>
@@ -236,7 +236,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 The Tree Amigos. All rights reserved.</p>
+                <p>&copy; <span data-config="currentYear"></span> <span data-config="company.name">The Tree Amigos</span>. All rights reserved.</p>
             </div>
         </div>
     </footer>
