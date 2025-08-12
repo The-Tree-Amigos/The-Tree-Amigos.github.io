@@ -381,12 +381,18 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
 }
 
+.contact-form-container {
+    min-height: 700px;
+}
+
 .google-form {
     width: 100%;
-    height: 600px;
+    min-height: 700px;
+    height: 700px;
     border: none;
     border-radius: 10px;
     background: white;
+    display: block;
 }
 
 .form-group {
@@ -640,6 +646,15 @@ h1, h2, h3, h4, h5, h6 {
     .service-category,
     .contact-form {
         padding: 1.5rem;
+    }
+
+    .contact-form-container {
+        min-height: 500px;
+    }
+
+    .google-form {
+        height: 500px;
+        min-height: 500px;
     }
 
     .hero-actions {
