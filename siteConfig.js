@@ -10,7 +10,7 @@ const siteConfig = {
   hours: "Monday - Saturday: 7:00 AM - 6:00 PM",
   social: {
     facebook: "#",
-    instagram: "#"
+    instagram: "https://www.instagram.com/treeamigosutah/"
   },
   services: {
     production: [
