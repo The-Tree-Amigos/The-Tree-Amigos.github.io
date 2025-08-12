@@ -23,22 +23,7 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "The Tree Amigos",
-        "description": "Professional tree care services",
-        "telephone": "(801) 555-TREE",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ogden",
-            "addressRegion": "UT",
-            "postalCode": "84401"
-        },
-        "areaServed": ["Ogden", "Salt Lake City"],
-        "serviceType": "Tree Care Services"
-    }
+    <script type="application/ld+json" id="structured-data">
     </script>
 </head>
 <body>
@@ -66,9 +51,9 @@
                 </div>
                 
                 <div class="nav-actions">
-                    <a href="tel:(801) 555-TREE" class="phone-btn" id="header-phone">
+                    <a href="" class="phone-btn" id="header-phone">
                         <span class="phone-icon">📞</span>
-                        <span class="phone-number">(801) 555-TREE</span>
+                        <span class="phone-number"></span>
                     </a>
                     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
                         <span class="hamburger"></span>
@@ -93,7 +78,7 @@
                     </p>
                     <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
-                        <a href="tel:(801) 555-TREE" class="btn btn-secondary">
+                        <a href="" class="btn btn-secondary" id="hero-phone">
                             <span class="phone-icon">📞</span>
                             Call Now
                         </a>
@@ -193,19 +178,19 @@
                         <div class="contact-details">
                             <div class="contact-item">
                                 <strong>Phone:</strong>
-                                <a href="tel:(801) 555-TREE" id="contact-phone">(801) 555-TREE</a>
+                                <a href="" id="contact-phone"></a>
                             </div>
                             <div class="contact-item">
                                 <strong>Email:</strong>
-                                <a href="mailto:info@thetreeamigos.com" id="contact-email">info@thetreeamigos.com</a>
+                                <a href="" id="contact-email"></a>
                             </div>
                             <div class="contact-item">
                                 <strong>Service Area:</strong>
-                                <span id="service-area">Ogden and Salt Lake City Area</span>
+                                <span id="service-area"></span>
                             </div>
                             <div class="contact-item">
                                 <strong>Hours:</strong>
-                                <span id="business-hours">Monday - Saturday: 7:00 AM - 6:00 PM</span>
+                                <span id="business-hours"></span>
                             </div>
                         </div>
                         
@@ -228,11 +213,11 @@
                     <span class="tagline" id="footer-tagline">We'll cut you... any tree!</span>
                 </div>
                 <div class="footer-contact">
-                    <span id="footer-phone">(801) 555-TREE</span>
-                    <span id="footer-email">info@thetreeamigos.com</span>
+                    <span id="footer-phone"></span>
+                    <span id="footer-email"></span>
                 </div>
                 <div class="footer-area">
-                    <span id="footer-service-area">Serving Ogden and Salt Lake City Area</span>
+                    <span id="footer-service-area">Serving </span>
                 </div>
             </div>
             <div class="footer-bottom">

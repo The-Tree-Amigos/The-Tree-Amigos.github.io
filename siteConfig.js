@@ -7,7 +7,7 @@ const siteConfig = {
     address: "Ogden, UT 84401"
   },
   serviceArea: "Ogden and Salt Lake City Area",
-  hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
+  hours: "Monday - Saturday: 7:00 AM - 6:00 PM",
   social: {
     facebook: "#",
     instagram: "#"

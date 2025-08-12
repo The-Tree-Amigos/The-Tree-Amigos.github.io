@@ -88,7 +88,14 @@ function populateContent() {
         if (el.tagName === 'A') {
             el.href = `tel:${siteConfig.company.phone}`;
         }
-        el.textContent = siteConfig.company.phone;
+        if (el.classList.contains('phone-number') || el.tagName === 'SPAN') {
+            el.textContent = siteConfig.company.phone;
+        } else if (el.tagName === 'A' && el.classList.contains('btn')) {
+            // For call now buttons, keep existing text
+            return;
+        } else {
+            el.textContent = siteConfig.company.phone;
+        }
     });
 
     // Update email addresses
@@ -115,7 +122,11 @@ function populateContent() {
     // Update service area
     const serviceAreaElements = document.querySelectorAll('[id*="service-area"]');
     serviceAreaElements.forEach(el => {
-        el.textContent = siteConfig.serviceArea;
+        if (el.textContent.includes('Serving')) {
+            el.textContent = `Serving ${siteConfig.serviceArea}`;
+        } else {
+            el.textContent = siteConfig.serviceArea;
+        }
     });
 
     // Update business hours
@@ -454,7 +465,7 @@ function getConfigValue(path) {
 
 // Update structured data script
 function updateStructuredData() {
-    const structuredDataScript = document.querySelector('script[type="application/ld+json"]');
+    const structuredDataScript = document.querySelector('#structured-data');
     if (structuredDataScript && siteConfig) {
         const structuredData = {
             "@context": "https://schema.org",
@@ -465,6 +476,7 @@ function updateStructuredData() {
             "email": siteConfig.company.email,
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": siteConfig.company.address,
                 "addressLocality": "Ogden",
                 "addressRegion": "UT",
                 "postalCode": "84401"
@@ -474,6 +486,6 @@ function updateStructuredData() {
             "openingHours": siteConfig.hours
         };
         
-        structuredDataScript.textContent = JSON.stringify(structuredData, null, 4);
+        structuredDataScript.textContent = JSON.stringify(structuredData, null, 2);
     }
 }
