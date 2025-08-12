@@ -174,65 +174,10 @@ function populateValueProps() {
     }
 }
 
-// Contact form functionality
+// Contact form functionality (Google Form iframe - no JS needed)
 function initContactForm() {
-    const form = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Show loading state
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        submitBtn.classList.add('loading');
-
-        // Validate form
-        if (!validateForm(form)) {
-            resetSubmitButton(submitBtn, originalText);
-            return;
-        }
-
-        // Submit form data
-        const formData = new FormData(form);
-        
-        // For now, simulate form submission since Formspree URL needs to be configured
-        setTimeout(() => {
-            showFormStatus('success', 'Thank you! Your message has been sent. We\'ll get back to you soon.');
-            form.reset();
-            resetSubmitButton(submitBtn, originalText);
-        }, 1500);
-
-        // Uncomment below and configure Formspree URL for actual submission
-        /*
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                showFormStatus('success', 'Thank you! Your message has been sent. We\'ll get back to you soon.');
-                form.reset();
-            } else {
-                throw new Error('Form submission failed');
-            }
-        })
-        .catch(error => {
-            console.error('Form submission error:', error);
-            showFormStatus('error', 'Sorry, there was an error sending your message. Please try calling us directly.');
-        })
-        .finally(() => {
-            resetSubmitButton(submitBtn, originalText);
-        });
-        */
-    });
+    // Google Form handles submission - no custom JS needed
+    console.log('Contact form loaded via Google Forms iframe');
 }
 
 // Form validation
