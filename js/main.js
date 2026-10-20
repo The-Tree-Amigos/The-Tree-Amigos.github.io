@@ -1,4 +1,6 @@
-// Mobile navigation toggle. All page content is static HTML; this only opens and closes the menu.
+// Progressive enhancements only; all page content is static HTML.
+
+// Mobile navigation toggle.
 (function () {
     var header = document.querySelector('.site-header');
     var toggle = document.querySelector('.nav-toggle');
@@ -32,5 +34,20 @@
             setOpen(false);
             toggle.focus();
         }
+    });
+})();
+
+// The embedded Google Form shows its confirmation at the top of a very tall frame, while the
+// visitor is still looking at the Submit button near the bottom. The frame fires `load` again on
+// every navigation inside it (submit, "submit another response"), so bring the card back into view.
+(function () {
+    var frame = document.querySelector('.estimate-form');
+    var card = document.querySelector('.form-card');
+    if (!frame || !card) return;
+
+    var loads = 0;
+    frame.addEventListener('load', function () {
+        loads += 1;
+        if (loads > 1) card.scrollIntoView({ block: 'start' });
     });
 })();

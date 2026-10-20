@@ -129,6 +129,13 @@ ul {
     scroll-margin-top: calc(var(--header-h) + 1rem);
 }
 
+/* Without JS the header wraps to two rows (113px) below 1024px. */
+@media (max-width: 1023px) {
+    .no-js [id] {
+        scroll-margin-top: 8rem;
+    }
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -1070,6 +1077,7 @@ ul {
 
 .form-card {
     min-width: 0;
+    scroll-margin-top: calc(var(--header-h) + 1rem);
     padding: 0.5rem 0 0.75rem;
     border-radius: var(--radius-lg);
     background: var(--cream-100);

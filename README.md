@@ -7,7 +7,7 @@ Landing page for The Tree Amigos, tree care from Ogden to Salt Lake City. Live a
 ```
 index.html              The whole page: content, meta tags, structured data, icon sprite
 css/styles.css          Styles (mobile-first)
-js/main.js              Mobile menu toggle
+js/main.js              Mobile menu toggle; scrolls back to the form's confirmation after submit
 images/
   hero-420.webp         Hero photo, two sizes
   hero-690.webp

@@ -10,7 +10,7 @@ Single-page landing site for The Tree Amigos, a tree care company serving Ogden 
 
 - Static HTML, CSS and a few lines of JS. No build step, no package.json, no config file.
 - **All content is written directly in `index.html`.** Crawlers and visitors with JS off must see every word, link and the structured data. Never move content into JS.
-- `js/main.js` only toggles the mobile menu. Without JS the mobile nav falls back to a scrollable row of links (`html.no-js`; an inline script in `<head>` swaps it to `js`).
+- `js/main.js` toggles the mobile menu and, after the estimate form submits, scrolls its confirmation back into view. Without JS the mobile nav falls back to a scrollable row of links (`html.no-js`; an inline script in `<head>` swaps it to `js`) and the header is two rows tall, so `.no-js [id]` gets a larger `scroll-margin-top`.
 - `css/styles.css` is mobile-first. Tokens (palette from the logo, fonts, spacing) are on `:root`. Breakpoints: 480, 600, 900, 1024px.
 - Fonts: Fraunces (headings) and Figtree (body) from Google Fonts.
 - Icons: inline SVG sprite at the top of `<body>` (Lucide, ISC licence), used via `<svg class="icon"><use href="#i-name"/></svg>`.
@@ -46,6 +46,7 @@ Changing the phone, email, hours or links means editing every occurrence in `ind
 
 ## Gotchas
 
+- The form's content is at least ~333px wide, so frames narrower than that (viewports under ~365px) scroll sideways inside the frame.
 - The Google Form cannot resize its iframe. `.estimate-form` has a fixed height tall enough for the whole form (about 2170–2290px depending on width). If questions are added to the form, raise those heights or users get a scroll-inside-a-scroll.
 - `images/logo.webp` has a transparent outer background, but the gaps between the figures are still the logo's cream. Only place it on a cream background.
 - `TreeService` is not a schema.org type; the JSON-LD uses `HomeAndConstructionBusiness` (a `LocalBusiness` subtype).
