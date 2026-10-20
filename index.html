@@ -1,197 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-config="company.name">The Tree Amigos - Professional Tree Care in Ogden & Salt Lake City</title>
-    <meta name="description" content="Professional tree care services in Ogden and Salt Lake City. Certified arborists specializing in tree pruning, removal, health consultations, and plant healthcare programs.">
-    <meta name="keywords" content="tree care, arborist, tree removal, tree pruning, Ogden, Salt Lake City, tree health">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="The Tree Amigos - Professional Tree Care" data-config="company.name">
-    <meta property="og:description" content="We'll cut you... any tree! Professional tree care services in the Ogden/SLC area." data-config="company.tagline">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Tree Amigos - Professional Tree Care in Ogden &amp; Salt Lake City</title>
+    <meta name="description" content="Licensed, insured tree care with an ISA Certified Arborist on staff. Pruning, removal, planting, and tree health care from Ogden to Salt Lake City. Free estimates.">
+    <link rel="canonical" href="https://treeamigosutah.com/">
+    <meta name="theme-color" content="#08332d">
+    <script>document.documentElement.className = 'js';</script>
+
     <meta property="og:type" content="website">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="preload" href="siteConfig.js" as="script">
-    
-    <!-- Stylesheets -->
+    <meta property="og:site_name" content="The Tree Amigos">
+    <meta property="og:title" content="The Tree Amigos - Professional Tree Care in Ogden &amp; Salt Lake City">
+    <meta property="og:description" content="Licensed, insured tree care with an ISA Certified Arborist on staff. Free estimates from Ogden to Salt Lake City.">
+    <meta property="og:url" content="https://treeamigosutah.com/">
+    <meta property="og:image" content="https://treeamigosutah.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Tree Amigos logo beside a climber removing a tall tree">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&amp;family=Fraunces:opsz,wght@9..144,600..700&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json" id="structured-data">
+    <script src="js/main.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://treeamigosutah.com/#business",
+        "name": "The Tree Amigos",
+        "slogan": "We'll cut you... any tree!",
+        "description": "Licensed and insured tree care with an ISA Certified Arborist on staff: pruning, removal, stump grinding, planting, and tree health care from Ogden to Salt Lake City, Utah.",
+        "url": "https://treeamigosutah.com/",
+        "telephone": "+1-801-228-0703",
+        "email": "info@treeamigosutah.com",
+        "logo": "https://treeamigosutah.com/images/logo.webp",
+        "image": "https://treeamigosutah.com/images/og-image.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ogden",
+            "addressRegion": "UT",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Ogden, UT" },
+            { "@type": "City", "name": "Salt Lake City, UT" }
+        ],
+        "openingHours": "Mo-Sa 07:00-18:00",
+        "sameAs": [
+            "https://www.instagram.com/treeamigosutah/",
+            "https://maps.app.goo.gl/Y5yyAq94NFY5wV8Z7"
+        ]
+    }
     </script>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <img src="images/logo.png" alt="The Tree Amigos Logo" class="logo" loading="lazy" data-alt-config="company.name">
-                    <span class="company-name" data-config="company.name">The Tree Amigos</span>
-                </div>
-                
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="#services" class="nav-link">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="nav-actions">
-                    <a href="" class="phone-btn" id="header-phone">
-                        <span class="phone-icon">📞</span>
-                        <span class="phone-number"></span>
-                    </a>
-                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
-                        <span class="hamburger"></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
+<body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Icons: Lucide (https://lucide.dev), ISC License, Copyright (c) Lucide Icons and Contributors -->
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-badge-check" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+        <symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+        <symbol id="i-clipboard-check" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+        <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+        <symbol id="i-axe" viewBox="0 0 24 24"><path d="m14 12-8.381 8.38a1 1 0 0 1-3.001-3L11 9"/><path d="M15 15.5a.5.5 0 0 0 .5.5A6.5 6.5 0 0 0 22 9.5a.5.5 0 0 0-.5-.5h-1.672a2 2 0 0 1-1.414-.586l-5.062-5.062a1.205 1.205 0 0 0-1.704 0L9.352 5.648a1.205 1.205 0 0 0 0 1.704l5.062 5.062A2 2 0 0 1 15 13.828z"/></symbol>
+        <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+        <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></symbol>
+        <symbol id="i-heart-pulse" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+        <symbol id="i-bug" viewBox="0 0 24 24"><path d="M12 20v-9"/><path d="M14 7a4 4 0 0 1 4 4v3a6 6 0 0 1-12 0v-3a4 4 0 0 1 4-4z"/><path d="M14.12 3.88 16 2"/><path d="M21 21a4 4 0 0 0-3.81-4"/><path d="M21 5a4 4 0 0 1-3.55 3.97"/><path d="M22 13h-4"/><path d="M3 21a4 4 0 0 1 3.81-4"/><path d="M3 5a4 4 0 0 0 3.55 3.97"/><path d="M6 13H2"/><path d="m8 2 1.88 1.88"/><path d="M9 7.13V6a3 3 0 1 1 6 0v1.13"/></symbol>
+        <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+        <symbol id="i-file-check" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m9 15 2 2 4-4"/></symbol>
+        <symbol id="i-wind" viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol>
+        <symbol id="i-scan-search" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/></symbol>
+        <symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+        <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    </svg>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#top">
+                <img src="images/mark.webp" width="44" height="44" alt="">
+                <span>The Tree Amigos</span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-arborist">Why an arborist</a></li>
+                    <li><a href="#service-area">Service area</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="btn btn-primary btn-sm header-call" href="tel:+18012280703">
+                <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                (801) 228-0703
+            </a>
+            <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+                <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+                <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"/></svg>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="hero-tagline" data-config="company.tagline">We'll cut you... any tree!</span>
-                        <span class="hero-subtitle">Professional Tree Care That Preserves Your Investment</span>
-                    </h1>
-                    <p class="hero-description">
-                        Certified arborists serving high-end properties in the Ogden and Salt Lake City area. 
-                        We focus on tree health, longevity, and preserving the value of your landscape.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
-                        <a href="" class="btn btn-secondary" id="hero-phone">
-                            <span class="phone-icon">📞</span>
-                            Call Now
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="kicker">We’ll cut you... any tree!</p>
+                    <h1>Expert tree care in <span class="accent">Ogden&nbsp;&amp; Salt&nbsp;Lake&nbsp;City</span></h1>
+                    <p class="lede">Pruning, removal, planting, and tree health care from a licensed and insured team with an ISA Certified Arborist on staff. We keep your trees healthy, your property safe, and your yard looking its best.</p>
+                    <div class="cta-row">
+                        <a class="btn btn-primary btn-lg" href="#contact">Get a free estimate</a>
+                        <a class="btn btn-outline btn-lg" href="tel:+18012280703">
+                            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                            Call (801) 228-0703
                         </a>
                     </div>
+                    <p class="hero-note">
+                        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                        Open Monday–Saturday, 7am–6pm
+                    </p>
                 </div>
-                <div class="hero-image">
-                    <img src="images/hero-tree-care.png" alt="Professional tree care services" loading="eager">
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services" id="services">
-            <div class="container">
-                <h2 class="section-title">How We Care for Your Trees</h2>
-                <div class="services-grid">
-                    <div class="service-category">
-                        <h3 class="service-category-title">Production Tree Care</h3>
-                        <ul class="service-list" id="production-services">
-                            <!-- Populated by JavaScript -->
-                        </ul>
-                    </div>
-                    <div class="service-category">
-                        <h3 class="service-category-title">Specialty Services</h3>
-                        <ul class="service-list" id="specialty-services">
-                            <!-- Populated by JavaScript -->
-                        </ul>
+                <div class="hero-media">
+                    <img src="images/hero-690.webp"
+                         srcset="images/hero-420.webp 420w, images/hero-690.webp 690w"
+                         sizes="(min-width: 900px) 460px, (min-width: 600px) 440px, calc(100vw - 2rem)"
+                         width="690" height="866"
+                         alt="Arborist in a climbing harness taking down a tall tree section by section, with cut logs on the lawn below"
+                         fetchpriority="high">
+                    <div class="hero-badge">
+                        <svg class="icon" aria-hidden="true"><use href="#i-badge-check"/></svg>
+                        <span><strong>ISA Certified Arborist</strong> on staff</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Value Proposition Section -->
-        <section class="value-props" id="about">
+        <div class="trust">
+            <ul class="container trust-list">
+                <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-badge-check"/></svg>
+                    <span>ISA Certified Arborist on staff</span>
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+                    <span>Licensed &amp; insured</span>
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-clipboard-check"/></svg>
+                    <span>Free estimates</span>
+                </li>
+                <li>
+                    <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                    <span>Ogden to Salt Lake City</span>
+                </li>
+            </ul>
+        </div>
+
+        <section class="section services" id="services" aria-labelledby="services-title">
             <div class="container">
-                <h2 class="section-title" data-config="company.name">Why Choose The Tree Amigos</h2>
-                <div class="value-grid" id="value-grid">
-                    <!-- Populated by JavaScript -->
+                <header class="section-head">
+                    <p class="eyebrow">What we do</p>
+                    <h2 id="services-title">Complete care for the trees around your home</h2>
+                    <p>From one overgrown limb to a yard full of mature trees, every job gets an arborist’s eye: what to cut, what to keep, and what your trees need to stay healthy for decades.</p>
+                </header>
+                <ul class="service-grid">
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-scissors"/></svg></span>
+                        <h3>Pruning &amp; trimming</h3>
+                        <p>Careful cuts that strengthen structure, clear roofs and lines, and lighten limbs before wind and snow. Includes crown thinning and reduction.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-axe"/></svg></span>
+                        <h3>Tree removal</h3>
+                        <p>Safe, controlled removal of dead, dying, or hazardous trees, planned around your home, fences, and landscaping.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-rings"/></svg></span>
+                        <h3>Stump grinding</h3>
+                        <p>Stumps ground below the surface so you can replant, reseed, or mow right over the spot.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></span>
+                        <h3>Tree planting</h3>
+                        <p>Help choosing the right tree for the right spot, planted properly so it settles in and thrives.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse"/></svg></span>
+                        <h3>Tree health assessments</h3>
+                        <p>A certified arborist checks for disease, pests, decay, root trouble, and weak structure, then lays out clear next steps.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-bug"/></svg></span>
+                        <h3>Disease &amp; pest treatment</h3>
+                        <p>Diagnosis and treatment for the insects and diseases that weaken trees, plus ongoing care to keep them vigorous.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></span>
+                        <h3>Cabling &amp; bracing</h3>
+                        <p>Added support for weak branch unions and heavy limbs, to help a valuable tree stay standing safely.</p>
+                    </li>
+                    <li class="service-card">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-file-check"/></svg></span>
+                        <h3>Risk assessments &amp; arborist reports</h3>
+                        <p>Find out whether a tree near your home is a hazard, with written findings when you need them on paper.</p>
+                    </li>
+                </ul>
+                <p class="services-cta">
+                    Not sure what your tree needs?
+                    <a href="#contact">Ask for a free estimate <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                </p>
+            </div>
+        </section>
+
+        <section class="section why" id="why-arborist" aria-labelledby="why-title">
+            <div class="container why-grid">
+                <div class="why-main">
+                    <p class="eyebrow">Why it matters</p>
+                    <h2 id="why-title">Why hire a certified arborist, not just a tree guy</h2>
+                    <p>Anyone can cut limbs. An ISA Certified Arborist knows how a tree will respond to every cut, how to spot disease and decay early, and when a tree can be saved instead of removed. Certification means passing the International Society of Arboriculture’s exam and keeping up with continuing education.</p>
+                    <p>That knowledge protects your trees, and your property, for the long haul.</p>
+                    <ul class="checklist">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>Pruning cuts that heal well and guide healthy growth</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>Early warning on disease, pests, and structural problems</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>Straight answers on when to save a tree and when to remove it</li>
+                    </ul>
+                </div>
+                <div class="why-cards">
+                    <article class="info-card">
+                        <svg class="icon" aria-hidden="true"><use href="#i-wind"/></svg>
+                        <h3>Why prune your trees?</h3>
+                        <p>Regular pruning keeps trees strong, safe, and healthy. Along the Wasatch Front that matters: a thinned crown lets canyon winds pass through instead of catching the tree like a sail, and lighter limbs shed heavy, wet snow instead of snapping under it. Good pruning also corrects weak structure early, so a tree lives longer and looks better.</p>
+                    </article>
+                    <article class="info-card">
+                        <svg class="icon" aria-hidden="true"><use href="#i-scan-search"/></svg>
+                        <h3>Tree health assessments: catch problems early</h3>
+                        <p>Not sure if a tree is thriving or in trouble? A professional assessment can find disease, pests, decay, root problems, or structural weakness before they turn costly or dangerous. We’ll walk you through the tree’s condition and recommend the best steps to keep it strong.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <div class="container">
-                <h2 class="section-title">Get Your Free Estimate</h2>
-                <div class="contact-grid">
-                    <div class="contact-form-container">
-                        <iframe 
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfyVm6pwfL6Jcgb7D2w8Aij4nfU60oj0pcgmeR_eGs_Uwh26Q/viewform?embedded=true" 
-                            class="google-form"
-                            frameborder="0" 
-                            marginheight="0" 
-                            marginwidth="0">
-                            Loading contact form...
-                        </iframe>
-                    </div>
-                    
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <strong>Phone:</strong>
-                                <a href="" id="contact-phone"></a>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Email:</strong>
-                                <a href="" id="contact-email"></a>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Service Area:</strong>
-                                <span id="service-area"></span>
-                            </div>
-                            <div class="contact-item">
-                                <strong>Hours:</strong>
-                                <span id="business-hours"></span>
-                            </div>
+        <section class="section area" id="service-area" aria-labelledby="area-title">
+            <div class="container area-grid">
+                <div class="area-logo">
+                    <img src="images/logo.webp" width="480" height="445" loading="lazy" decoding="async"
+                         alt="The Tree Amigos logo: three sugar-skull mariachis holding a chainsaw, a guitar, and a machete, above the slogan We’ll cut you... any tree">
+                </div>
+                <div class="area-copy">
+                    <p class="eyebrow">Service area</p>
+                    <h2 id="area-title">Local tree care from Ogden to Salt Lake City</h2>
+                    <p>We work with homeowners up and down the Wasatch Front, from Ogden to Salt Lake City and the communities in between, including:</p>
+                    <ul class="city-list">
+                        <li>Ogden</li>
+                        <li>South Ogden</li>
+                        <li>Roy</li>
+                        <li>Layton</li>
+                        <li>Kaysville</li>
+                        <li>Farmington</li>
+                        <li>Centerville</li>
+                        <li>Bountiful</li>
+                        <li>Salt Lake City</li>
+                    </ul>
+                    <p>Not sure if you’re in our area? <a href="tel:+18012280703">Give us a call</a> and ask.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq" aria-labelledby="faq-title">
+            <div class="container narrow">
+                <header class="section-head">
+                    <p class="eyebrow">FAQ</p>
+                    <h2 id="faq-title">Common questions</h2>
+                </header>
+                <div class="faq-list">
+                    <details>
+                        <summary>Are estimates free?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Yes. We’ll look at your trees, talk through what you want, and give you a clear recommendation and price, with no obligation.</p>
                         </div>
-                        
-                        <div class="contact-cta">
-                            <p><strong>Ready to improve your trees?</strong></p>
-                            <p>Call us today for your free consultation and estimate!</p>
+                    </details>
+                    <details>
+                        <summary>Are you licensed and insured?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Yes. The Tree Amigos is licensed and insured, with an ISA Certified Arborist on staff.</p>
                         </div>
-                    </div>
+                    </details>
+                    <details>
+                        <summary>When is the best time to prune?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>For most trees, late winter while they’re dormant: cuts close faster and the tree’s structure is easy to see without leaves. Dead, broken, or hazardous limbs should come off as soon as possible, any time of year.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Can a sick tree be saved?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Often, if the problem is caught early. A health assessment tells you what’s wrong, whether treatment is likely to work, and what it will take. If a tree can’t be saved, we’ll tell you that too.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <p class="eyebrow">Free estimates</p>
+                    <h2 id="contact-title">Get your free estimate</h2>
+                    <p>Tell us about your trees and we’ll get back to you to set up a time to take a look. Prefer to talk it through? Give us a call.</p>
+                    <ul class="contact-list">
+                        <li>
+                            <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+                            <span><span class="contact-label">Phone</span><a href="tel:+18012280703">(801) 228-0703</a></span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+                            <span><span class="contact-label">Email</span><a href="mailto:info@treeamigosutah.com">info@treeamigosutah.com</a></span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                            <span><span class="contact-label">Hours</span>Monday–Saturday, 7am–6pm</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg></span>
+                            <span><span class="contact-label">Service area</span>Ogden to Salt Lake City</span>
+                        </li>
+                    </ul>
+                    <p class="contact-urgent"><strong>Tree or limb threatening your home?</strong> Calling is the fastest way to reach us.</p>
+                    <a class="btn btn-outline-light btn-sm" href="https://maps.app.goo.gl/Y5yyAq94NFY5wV8Z7" target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+                        Find us on Google
+                    </a>
+                </div>
+                <div class="form-card">
+                    <iframe class="estimate-form"
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfyVm6pwfL6Jcgb7D2w8Aij4nfU60oj0pcgmeR_eGs_Uwh26Q/viewform?embedded=true"
+                            title="Request an estimate"
+                            loading="lazy">Loading the estimate form…</iframe>
+                    <p class="form-fallback">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyVm6pwfL6Jcgb7D2w8Aij4nfU60oj0pcgmeR_eGs_Uwh26Q/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="company-name" id="footer-company">The Tree Amigos</span>
-                    <span class="tagline" id="footer-tagline">We'll cut you... any tree!</span>
-                </div>
-                <div class="footer-contact">
-                    <span id="footer-phone"></span>
-                    <span id="footer-email"></span>
-                </div>
-                <div class="footer-area">
-                    <span id="footer-service-area">Serving </span>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand brand-light" href="#top">
+                    <img src="images/mark.webp" width="44" height="44" alt="" loading="lazy">
+                    <span>The Tree Amigos</span>
+                </a>
+                <p class="footer-tagline">We’ll cut you... any tree!</p>
+                <p>Professional tree care from Ogden to Salt Lake City. Licensed and insured, with an ISA Certified Arborist on staff.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span data-config="currentYear"></span> <span data-config="company.name">The Tree Amigos</span>. All rights reserved.</p>
+            <div>
+                <h2 class="footer-heading">Contact</h2>
+                <ul class="footer-links">
+                    <li><a href="tel:+18012280703">(801) 228-0703</a></li>
+                    <li><a href="mailto:info@treeamigosutah.com">info@treeamigosutah.com</a></li>
+                    <li>Monday–Saturday, 7am–6pm</li>
+                </ul>
             </div>
+            <div>
+                <h2 class="footer-heading">Explore</h2>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-arborist">Why an arborist</a></li>
+                    <li><a href="#service-area">Service area</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Free estimate</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="footer-heading">Follow</h2>
+                <ul class="footer-links">
+                    <li>
+                        <a class="icon-link" href="https://www.instagram.com/treeamigosutah/" target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a class="icon-link" href="https://maps.app.goo.gl/Y5yyAq94NFY5wV8Z7" target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+                            Find us on Google
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Tree Amigos. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="siteConfig.js"></script>
-    <script src="js/main.js"></script>
+    <div class="call-bar">
+        <a class="btn btn-gold" href="tel:+18012280703">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+            Call now
+        </a>
+        <a class="btn btn-outline-light" href="#contact">Free estimate</a>
+    </div>
 </body>
 </html>
