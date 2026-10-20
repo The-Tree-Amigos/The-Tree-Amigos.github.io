@@ -1099,6 +1099,14 @@ ul {
     text-align: center;
 }
 
+/* The form needs a 333px frame; below that the card drops its gutters and runs edge to edge. */
+@media (max-width: 364px) {
+    .form-card {
+        margin-inline: calc(-1 * var(--gutter));
+        border-radius: 0;
+    }
+}
+
 @media (min-width: 480px) {
     .form-card {
         padding: 1rem 0.5rem 1rem;

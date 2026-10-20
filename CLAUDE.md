@@ -46,7 +46,7 @@ Changing the phone, email, hours or links means editing every occurrence in `ind
 
 ## Gotchas
 
-- The form's content is at least ~333px wide, so frames narrower than that (viewports under ~365px) scroll sideways inside the frame.
+- The form's content needs a frame at least 333px wide. Below a 365px viewport the form card drops its side gutters to get there; at 320px it still falls ~13px short and scrolls sideways inside the frame.
 - The Google Form cannot resize its iframe. `.estimate-form` has a fixed height tall enough for the whole form (about 2170–2290px depending on width). If questions are added to the form, raise those heights or users get a scroll-inside-a-scroll.
 - `images/logo.webp` has a transparent outer background, but the gaps between the figures are still the logo's cream. Only place it on a cream background.
 - `TreeService` is not a schema.org type; the JSON-LD uses `HomeAndConstructionBusiness` (a `LocalBusiness` subtype).
